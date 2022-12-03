@@ -4,6 +4,7 @@ def remove_char_at(str, n):
     idx = 0
     for i in str:
         if idx == n:
+            idx += 1
             continue
         word += i
         idx += 1

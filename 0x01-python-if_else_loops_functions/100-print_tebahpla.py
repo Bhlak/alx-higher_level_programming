@@ -2,4 +2,4 @@
 for i in range(122, 98, -1):
     if i % 2 != 0:
         i = i - 32
-    print("{i}", end="")
+    print("{}".format(i), end="")
