@@ -50,9 +50,9 @@ int is_palindrome(listint_t **head)
 	}
 
 	curr = *head;
-	for (i = 0; i < ((size / 2) - 1); i++)
+	for (i = 0; i < ((count / 2) - 1); i++)
 		curr = curr->next;
-	if ((size % 2) == 0 && curr->n != curr->next->n)
+	if ((count % 2) == 0 && curr->n != curr->next->n)
 		return (0);
 
 	curr = curr->next->next;
