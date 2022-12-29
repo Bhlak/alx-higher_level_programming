@@ -5,7 +5,7 @@
 
 class Square:
     """Defines a square"""
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """
 
         Initializes a new square with a private size and position.
@@ -42,13 +42,14 @@ class Square:
                 not all(i >= 0 for i in value)):
             raise TypeError("position must br a tuple of 2 positive integers")
         self.__position = value
+
     def area(self):
         return (self.__size ** 2)
 
     def my_print(self):
         length = self.size
         if length == 0:
-            print("")
+            print()
             return
         j = length
         pos = self.position

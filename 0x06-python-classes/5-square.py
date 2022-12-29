@@ -41,4 +41,3 @@ class Square:
         while (length > 0):
             print("#"*j)
             length -= 1
-            
