@@ -2,7 +2,6 @@
 
 """Defines a class 'Square'"""
 
-
 class Square:
     """Defines a square"""
     def __init__(self, size=0, position=(0, 0)):
@@ -50,9 +49,9 @@ class Square:
     def my_print(self):
         length = self.size
         if length == 0:
-            print()
+            print("")
             return
-        j = length
+        j = self.size
         pos = self.position
         temp = pos[1]
         while temp > 0:
