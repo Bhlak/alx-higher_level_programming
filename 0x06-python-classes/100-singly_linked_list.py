@@ -50,6 +50,12 @@ class SinglyLinkedList:
         self.__head = None
 
     def sorted_insert(self, value):
+        """
+        Inserts a new node to the correct numerical position in the linked list
+
+        Args:
+            value (Node): New node to be inserted
+        """
         new = Node(value)
 
         if self.__head is None:
