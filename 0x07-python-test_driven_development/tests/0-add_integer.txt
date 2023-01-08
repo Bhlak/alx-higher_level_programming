@@ -1,0 +1,45 @@
+Module definesa simple addition function: add_integer(a, b=98)
+==============================================================
+
+==================
+Tests With Numbers
+==================
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+	>>> add_integer(2, 5)
+	7
+
+Test with negative values
+-------------------------
+	>>> add_integer(-2, 5)
+	3
+	
+	>>> add_integer(2, -5)
+	-3
+
+Test with floats
+----------------
+	>>> add_integer(2.0, 5.0)
+	7
+
+Second value is optional(Default is 98):
+       >>> add_integer(3)
+       101
+
+======================
+Tests With Non-Numbers
+======================
+
+Test with strings
+-----------------
+
+     >>> add_integer('yeet', 5)
+     Traceback (most recent call last):
+     ...
+     TypeError: a must be an integer
+
+     >>> add_integer(3, 'home')
+     Traceback (most recent call last):
+     ...
+     TypeError: b must be an integer
