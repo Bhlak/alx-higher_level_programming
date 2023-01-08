@@ -1,4 +1,4 @@
-Module definesa simple addition function: add_integer(a, b=98)
+Module defines a simple addition function: add_integer(a, b=98)
 ==============================================================
 
 ==================
