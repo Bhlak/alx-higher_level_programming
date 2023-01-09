@@ -1,3 +1,5 @@
+Importing function from module:
+	  >>> BG = __import__("7-base_geometry").BaseGeometry
 Checking Documentation
 ======================
 
@@ -28,7 +30,7 @@ Checking Area Method
 
 Check for failure
 -----------------
-	>>> bas = BaseGeometry()
+	>>> bas = BG()
 	>>> bas.area()
 	Traceback (most recent call last):
 	...
