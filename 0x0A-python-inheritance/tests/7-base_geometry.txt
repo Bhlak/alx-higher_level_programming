@@ -1,0 +1,43 @@
+Checking Documentation
+======================
+
+Check if module has documentation
+----------------------------------
+	>>> mod = __import__("7-base_geometry").__doc__
+	>>> len(mod) > 1
+	True
+
+Check if class has documentation
+--------------------------------
+	>>> cla = __import__("7-base_geometry").BaseGeometry.__doc__
+	>>> len(cla) > 1
+	True
+
+Check if functions have documentation
+-------------------------------------
+	>>> ar = __import__("7-base_geometry").BaseGeometry.area.__doc__
+	>>> len(ar) > 1
+	True
+
+	>>> val = __import__("7-base_geometry").BaseGeometry.integer_validator.__doc__
+	>>> len(val) > 1
+	True
+
+Checking Area Method
+====================
+
+Check for failure
+-----------------
+	>>> bas = BaseGeometry()
+	>>> bas.area()
+	Traceback (most recent call last):
+	...
+	Exception: area() is not implemented
+
+Check for too many arguments
+----------------------------
+	>>> bas.area(3)
+	Traceback (most recent call last):
+	...
+	TypeError: area() takes 1 positional argument but 2 were given
+	

@@ -11,7 +11,7 @@ class MyList(list):
         super().__init__()
 
     def print_sorted(self):
-        """Prints a list of the MyList object sorted 
+        """Prints a list of the MyList object sorted
            in ascending order.
         """
         print(sorted(self))
