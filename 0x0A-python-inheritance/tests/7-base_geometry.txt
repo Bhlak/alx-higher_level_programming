@@ -1,5 +1,6 @@
 Importing function from module:
 	  >>> BG = __import__("7-base_geometry").BaseGeometry
+
 Checking Documentation
 ======================
 
@@ -52,7 +53,7 @@ Check for value being an integer
 
 Check for value being less than 0
 ---------------------------------
-	>>> bas.integrer_validator("less", -5)
+	>>> bas.integer_validator("less", -5)
 	Traceback (most recent call last):
 	...
 	ValueError: less must be greater than 0
