@@ -1,0 +1,23 @@
+Check if module has documentation:
+----------------------------------
+      >>> mod = __import__("1-my_list").__doc__
+      >>> len(mod) > 1
+      True
+
+Check if class has documentation:
+---------------------------------
+	>>> cla = __import__("1-my_list").MyList.__doc__
+	>>> len(cla) > 1
+	True
+
+Check if methods have documentation:
+------------------------------------
+	>>> met = __import__("1-my_list").MyList.print_sorted.__doc__
+	>>> len(met) > 1
+	True
+
+Check if MyList is a subclass of list:
+--------------------------------------
+      >>> MyList = __import__("1-my_list").MyList
+      >>> issubclass(MyList, list)
+      True
