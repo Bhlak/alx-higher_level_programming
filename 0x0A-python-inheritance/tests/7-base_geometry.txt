@@ -76,6 +76,66 @@ String:
 	...
 	TypeError: string must be an integer
 
+Boolean:
+	>>> bas.integer_validator("bool", False)
+	Traceback (most recent call last):
+	...
+	TypeError: bool must be an integer
+
+Complex:
+	>>> bas.integer_validator("complex", complex(1,1))
+	Traceback (most recent call last):
+	...
+	TypeError: complex must be an integer
+
+Tuple:
+	>>> bas.integer_validator("tuple", (1, 2))
+	Traceback (most recent call last):
+	...
+	TypeError: tuple must be an integer
+
+List:
+	>>> bas.integer_validator("list", [1, 2, 3])
+	Traceback (most recent call last):
+	...
+	TypeError: list must be an integer
+
+Dict:
+	>>> bas.integer_validator("dict", {"key": "value"})
+	Traceback (most recent call last):
+	...
+	TypeError: dict must be an integer
+
+Set:
+	>>> bas.integer_validator("set", {"apple", "banana"})
+	Traceback (most recent call last):
+	...
+	TypeError: set must be an integer
+
+Frozenset:
+	>>> bas.integer_validator("frozenset", frozenset(["hello", "world"]))
+	Traceback (most recent call last):
+	...
+	TypeError: frozenset must be an integer
+
+Bytes:
+	>>> bas.integer_validator("bytearrays", bytearray(b"bytes"))
+	Traceback (most recent call last):
+	...
+	TypeError: bytearrays must be an integer
+
+Float:
+	>>> bas.integer_validator("float", 3.2)
+	Traceback (most recent call last):
+	...
+	TypeError: float must be an integer
+
+String:
+	>>> bas.integer_validator("string", "bot")
+	Traceback (most recent call last):
+	...
+	TypeError: string must be an integer
+
 Checking for no arguments to integer_validator
 ----------------------------------------------
 	  >>> bas.integer_validator()
