@@ -40,4 +40,59 @@ Check for too many arguments
 	Traceback (most recent call last):
 	...
 	TypeError: area() takes 1 positional argument but 2 were given
-	
+
+Checking Integer Validator Method
+=================================
+
+Check for value being an integer
+--------------------------------
+	>>> bas.integer_validator("boss", 10)
+
+Check for value being less than 0
+---------------------------------
+	>>> bas.integrer_validator("less", -5)
+	Traceback (most recent call last):
+	...
+	ValueError: less must be greater than 0
+
+Check for value being equal to 0
+--------------------------------
+	>>> bas.integer_validator("equal", 0)
+	Traceback (most recent call last):
+	...
+	ValueError: equal must be greater than 0
+
+Check for value not being an integer
+------------------------------------
+Float:
+	>>> bas.integer_validator("float", 3.2)
+	Traceback (most recent call last):
+	...
+	TypeError: float must be an integer
+
+String:
+	>>> bas.integer_validator("string", "bot")
+	Traceback (most recent call last):
+	...
+	TypeError: string must be an integer
+
+Checking for no arguments to integer_validator
+----------------------------------------------
+	  >>> bas.integer_validator()
+	  Traceback (most recent call last):
+          ...
+	  TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+Checking for only 1 argument to integer_validator
+-------------------------------------------------
+	  >>> bas.integer_validator("integer")
+	  Traceback (most recent call last):
+          ...
+	  TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+Checking for too many arguments
+-------------------------------
+	  >>> bas.integer_validator("integer", 1, 2)
+	  Traceback (most recent call last):
+          ...
+	  TypeError: integer_validator() takes 3 positional arguments but 4 were given
