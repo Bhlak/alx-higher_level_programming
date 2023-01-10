@@ -14,9 +14,8 @@ class Student:
         """Retrieves a dictionary representation of the
         current instance
         """
-        if (type(attrs) == list and
-            all(type(e) == str for e in attrs)):
-            return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
+        if (type(attrs) == list and all(type(e) == str for e in attrs)):
+            return ({k: getattr(self, k) for k in attrs if hasattr(self, k)})
         return self.__dict__
 
     def reload_from_json(self, json):

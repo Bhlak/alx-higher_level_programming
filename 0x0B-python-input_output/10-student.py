@@ -14,7 +14,6 @@ class Student:
         """Retrieves a dictionary representation of the
         current instance
         """
-        if (type(attrs) == list and
-            all(type(e) == str for e in attrs)):
+        if (type(attrs) == list and all(type(e) == str for e in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
