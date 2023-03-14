@@ -1,10 +1,10 @@
 #!/usr/bin/node
 
-function factorial (num) {
+function factorial(num) {
   if (Object.is(num, NaN) || num === 0) {
     return 1;
   }
   return num * factorial(num - 1);
 }
 
-console.log(factorial(process.argv[2]));
+console.log(factorial(parseInt(process.argv[2])));
